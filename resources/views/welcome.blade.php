@@ -129,7 +129,7 @@
             }
         }
         </script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzilZ4qd_1RF8BgiprKGu-NOi05AkRDDw&callback=initMap"
+        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=initMap"
         async defer>
         </script>
     </body>
