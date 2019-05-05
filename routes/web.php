@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('peta', 'SekolahCtrl');
+
+Route::get('/data', 'SekolahCtrl@fetchData');
