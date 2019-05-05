@@ -1,3 +1,3 @@
 @foreach($sekolahan as $sekolah)
-    {{$sekolah}}<br>
+    {{$sekolah->x}},{{$sekolah->y}}<br>
 @endforeach

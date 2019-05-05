@@ -80,63 +80,6 @@
             @yield('ctrl')
             @yield('maps')            
         </div>
-        <script>
-            function initMap() {
-                var options = {
-                    zoom : 16, 
-                    center:{lat:-6.59768, lng:106.799574}
-                }
-                var map = new
-                google.maps.Map(document.getElementById('map'), options);
-
-                // var marker = new google.maps.Marker({
-                //     position:{lat:-6.5971, lng:106.8060},
-                //     map:map,
-
-                // });
-
-                // var infoWindow = new google.maps.InfoWindow({
-                //     content:'<h1>Bogor</h1>'
-                // });
-
-                // marker.addListener('click', function(){
-                //     infoWindow.open(map,marker);
-                // });
-
-                //Listen for click on map
-                google.maps.event.addListener(map, 'click', 
-                function(event){
-                    //Marker
-                    addMarker({coords:event.latLng});
-                });
-
-                // addMarker({
-                //     coords:{lat:-6.59768, lng:106.799574},
-                //     content:{
-                //         nama: '<h1>Kebun Raya Bogor</h1>'
-                //         },
-                    
-                //     });
-                
-                function addMarker(props){
-                    var marker = new google.maps.Marker({
-                        position:props.coords,
-                        map:map,
-                    });
-                    if(props.content){
-                        var infoWindow = new google.maps.InfoWindow({
-                        content:props.content.nama,
-                    });
-                    marker.addListener('click', function(){
-                        infoWindow.open(map,marker);
-                    });
-
-                    }
-                }
-            }
-            </script>
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzilZ4qd_1RF8BgiprKGu-NOi05AkRDDw&callback=initMap"
-            async defer>
-            </script>
+        @yield('script')
     </body>
 </html>

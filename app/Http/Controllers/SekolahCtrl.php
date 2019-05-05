@@ -16,7 +16,8 @@ class SekolahCtrl extends Controller
     public function index()
     {
         //
-        return view('maps.view');
+        $sekolahan = Sekolah::all();
+        return view('maps.view', compact('sekolahan'));
     }
 
     public function fetchData(){
